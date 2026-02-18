@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTAL BOSQUE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="warning" class="warning">
+  ⚠️ Aviso: Todos los datos se guardan únicamente en este dispositivo.
+  Si ingresas desde otro móvil o navegador, los registros no estarán disponibles.
+</div>
+
+<div id="login" class="container">
+  <h1>PORTAL BOSQUE</h1>
+  <input type="text" id="user" placeholder="Usuario">
+  <input type="password" id="pass" placeholder="Contraseña (4 dígitos)" maxlength="4">
+  <button onclick="login()">Ingresar</button>
+</div>
+
+<div id="app" class="hidden">
+
+<header>
+  <h2>PORTAL BOSQUE</h2>
+  <div id="clock"></div>
+  <button onclick="logout()">Salir</button>
+</header>
+
+<section class="form">
+  <h3>Nueva Jornada</h3>
+
+  <input type="date" id="date">
+  <input type="time" id="in" value="07:00">
+  <input type="time" id="out" value="14:00">
+
+  <button onclick="saveEntry()">Guardar Jornada</button>
+</section>
+
+<section>
+  <h3>Registros</h3>
+  <div id="list"></div>
+</section>
+
+<section>
+  <h3>Resumen Mensual</h3>
+  <div id="summary"></div>
+</section>
+
+<button class="share" onclick="shareWhatsApp()">Compartir por WhatsApp</button>
+
+<button class="dark" onclick="toggleDark()">Modo Oscuro</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
